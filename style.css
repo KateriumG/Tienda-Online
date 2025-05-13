@@ -1,0 +1,118 @@
+body {
+    font-family:"Poppins", sans-serif;
+    margin: 0;
+    background: linear-gradient(to right, rgb(215, 167, 128), rgb(225, 146, 72));
+    padding: 20px;
+    animation: entradaSuave 1s ease-in-out;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(39, 21, 0);
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    animation: entradaSuave 1.2s ease-in-out;
+}
+
+.productos {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.productos {
+    background-color: coral;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3 ease;
+    animation: fadeIn 0.5s ease;
+}
+
+.producto:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.producto h3 {
+    margin-bottom: 10px;
+    color: rgb(27, 25, 22);
+}
+
+.producto p {
+    color: rgb(29, 26, 24);
+    font-weight: bold;
+}
+
+.producto button{
+    margin-top: 15px;
+    padding: 10px 18px;
+    background-color: rgb(186, 46, 43);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2;
+}
+
+.producto button:hover {
+    background-color: rgb(129, 28, 26);
+    transform: scale(1.05);
+}
+
+.carrito {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fefefe;
+    border: 2px dashed #ccc;
+    padding: 25px;
+    border-radius: 20px;
+    animation: fadeIn 0.8s ease;
+}
+
+.carrito h2 {
+    text-align: center;
+    color: black;
+}
+
+.item-carrito {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    font-weight: 500;
+}
+
+.total {
+    font-weight: bold;
+    text-align: right;
+    margin-top: 20px;
+    font-size: 20px;
+    color: black;
+}
+
+.boton-comprar {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    background-color: rgb(255, 136, 0);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; transform: 0.2s;
+}
+
+.boton-comprar:hover {
+    background-color: rgb(229, 107, 0);
+    transform: scale(1.02);
+}
+
