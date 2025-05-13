@@ -116,3 +116,6 @@ h1 {
     transform: scale(1.02);
 }
 
+img {
+    height: 150px;
+}
