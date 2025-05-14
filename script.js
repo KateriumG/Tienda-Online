@@ -7,13 +7,13 @@ function agregarAlCarrito(nombreProducto, precioProducto) {
     precio: precioProducto
   };
   carrito.push(producto);
+  carritoalt.push(producto.nombre);
   actualizarCarrito();
 }
 
 function actualizarCarrito() {
   const listaCarrito = document.getElementById('listaCarrito');
   const totalPagar = document.getElementById('totalPagar');
-
   listaCarrito.innerHTML = '';
   total = 0;
 
@@ -24,7 +24,7 @@ function actualizarCarrito() {
     item.innerHTML = `
       <span>${producto.nombre}</span>
       <span>$${producto.precio}</span>
-      <button onclick"">Borrar</button>
+      <button onclick="eliminarItem()">Borrar</button>
     `;
     listaCarrito.appendChild(item);
   });
@@ -40,5 +40,10 @@ function finalizarCompra() {
 
   alert(`Gracias por tu compra. Total a pagar: $${total}`);
   carrito = [];
+  actualizarCarrito();
+}
+
+function eliminarItem(){
+  carrito.pop();
   actualizarCarrito();
 }
