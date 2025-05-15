@@ -44,6 +44,6 @@ function finalizarCompra() {
 }
 
 function eliminarItem(){
-  carrito.pop();
+  carrito = [];
   actualizarCarrito();
 }
