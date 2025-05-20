@@ -113,7 +113,16 @@
             
         </div>
         <div class="total">Total : $<span id="totalPagar">0</span></div>
-        <button class="boton-comprar" onclick="finalizarCompra()">Finalizar Compra</button>
+        <table style="width: 99%;">
+            <tr>
+                <td style="width: 50%;">
+                    <button class="boton-comprar" onclick="finalizarCompra()">Finalizar Compra</button>
+                </td>
+                <td style="width: 99;">
+                    <button class="boton-comprar" onclick="eliminarItem()">Borrar</button>
+                </td>
+            </tr>
+        </table>
     </div>
     <script src="script.js"></script>
 </body>

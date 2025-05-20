@@ -1,5 +1,6 @@
 let carrito = [];
 let total = 0;
+let carritoalt = [];
 
 function agregarAlCarrito(nombreProducto, precioProducto) {
   const producto = {
@@ -24,7 +25,6 @@ function actualizarCarrito() {
     item.innerHTML = `
       <span>${producto.nombre}</span>
       <span>$${producto.precio}</span>
-      <button onclick="eliminarItem()">Borrar</button>
     `;
     listaCarrito.appendChild(item);
   });
@@ -44,6 +44,6 @@ function finalizarCompra() {
 }
 
 function eliminarItem(){
-  carrito.pop();
+  carrito = [];
   actualizarCarrito();
 }
