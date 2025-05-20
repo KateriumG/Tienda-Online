@@ -98,7 +98,7 @@
             <img src="pizzas_img/papas_francesas.jpeg" alt="">
             <h3>Papas - Francesas</h3>
             <p>$5000</p>
-            <button onclick="agregarAlCarrito('papas_francesas', 5000)">Añadir al Carrito</button>
+            <button onclick="agregarAlCarrito('papas_francesas', 5000)" >Añadir al Carrito</button>
         </div>
         <div class="producto">
             <img src="pizzas_img/gaseosa_pepsi.webp" alt="">
@@ -119,10 +119,11 @@
                     <button class="boton-comprar" onclick="finalizarCompra()">Finalizar Compra</button>
                 </td>
                 <td style="width: 99;">
-                    <button class="boton-comprar" onclick="eliminarItem()">Borrar</button>
+                    <button class="boton-comprar" onclick="eliminarItems()">Borrar Todo</button>
                 </td>
             </tr>
         </table>
+        <button class="boton-comprar"><a href="https://www.paypal.com/us/business/accept-payments/checkout">Pagar en Paypal</a></button>
     </div>
     <script src="script.js"></script>
 </body>

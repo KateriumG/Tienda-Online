@@ -1,6 +1,5 @@
 let carrito = [];
 let total = 0;
-let carritoalt = [];
 
 function agregarAlCarrito(nombreProducto, precioProducto) {
   const producto = {
@@ -8,7 +7,6 @@ function agregarAlCarrito(nombreProducto, precioProducto) {
     precio: precioProducto
   };
   carrito.push(producto);
-  carritoalt.push(producto.nombre);
   actualizarCarrito();
 }
 
@@ -25,6 +23,16 @@ function actualizarCarrito() {
     item.innerHTML = `
       <span>${producto.nombre}</span>
       <span>$${producto.precio}</span>
+      <button class="eliminar" style="
+      padding: 5px 9px;
+      background-color: rgb(186, 46, 43);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.2;
+      " onclick="eliminarProducto('${producto.nombre}')">Eliminar</button>
     `;
     listaCarrito.appendChild(item);
   });
@@ -43,7 +51,12 @@ function finalizarCompra() {
   actualizarCarrito();
 }
 
-function eliminarItem(){
+function eliminarItems(){
   carrito = [];
+  actualizarCarrito();
+}
+
+function eliminarProducto(pr) {
+  carrito = carrito.filter(producto => producto.nombre !== pr);
   actualizarCarrito();
 }
