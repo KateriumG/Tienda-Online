@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #faf7f2;
+  color: #333;
+}
+
+.hero {
+  height: 70vh;
+  background: url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4")
+    center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.55);
+  color: white;
+  text-align: center;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.overlay h1 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.overlay button {
+  background: #c0392b;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.overlay button:hover {
+  background: #e74c3c;
+}
+
+.menu-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.menu-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.menu-btn {
+  background: #27ae60;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  transition: 0.3s;
+}
+
+.menu-btn:hover {
+  background: #2ecc71;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  max-width: 1000px;
+  margin: auto;
+  gap: 25px;
+}
+
+.dish-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.dish-card:hover {
+  transform: translateY(-8px);
+}
+
+.dish-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.dish-info {
+  padding: 20px;
+}
+
+.dish-info h3 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.dish-info p {
+  color: #c0392b;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
